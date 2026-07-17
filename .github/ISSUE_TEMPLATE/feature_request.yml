@@ -1,0 +1,47 @@
+name: Feature request
+description: Propose a new capability or a change of behavior within an existing package.
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can't you do today, or what is painful?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Owning package
+      description: >-
+        Which package should own this? A feature must live in exactly one
+        package's domain. If it doesn't fit any, it may be a new package —
+        open an RFC instead.
+      options:
+        - kern-link
+        - kern-steering
+        - kern-orchestration
+        - kern-policies
+        - kern-skills
+        - kern-tools
+        - kern-execution
+        - kern-guard
+        - kern-pii
+        - kern-scorer
+        - kern-observation
+        - kern-vault
+        - core (osd / composition root / norm)
+        - not sure / spans several (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

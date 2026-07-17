@@ -1,0 +1,51 @@
+name: RFC / design proposal
+description: Propose a new package, a new interface, or any cross-package change.
+title: "[rfc] "
+labels: ["rfc"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: The problem this solves and why now.
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed design
+      description: >-
+        Interfaces, manifests, data flow. State where it sits relative to the
+        hot path (policies-gate → orchestration → guard → pii → kern-link →
+        provider) and whether it blocks inline or scores async.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New package (brick)
+        - Change to an existing package's interface
+        - Change to the norm (manifest schemas)
+        - Cross-package / architectural
+        - Org convention or process
+    validations:
+      required: true
+  - type: checkboxes
+    id: brick-test
+    attributes:
+      label: Brick test (required for new packages)
+      description: See docs/brick-test.md in the .github repo. Skip if this is not a new package.
+      options:
+        - label: The core runs without it.
+        - label: It owns exactly one domain.
+        - label: Plugging it in upgrades the core without modifying any other package.
+        - label: Untrusted execution (if any) stays out-of-process and capability-sandboxed.
+        - label: It can live in its own repo with its own semver.
+        - label: It is consumed only via the norm (manifests) — no reaching into core internals.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Breaking changes, migration, privacy (GDPR) implications, security surface.
