@@ -1,39 +1,31 @@
 # Repository naming convention
 
-**Settled (2026-07): package repos use the `kern-*` family.**
+**Settled (2026-07): repos use a `<prefix>-<domain>` family.**
+
+The prefix is the product name. The product and the org are being renamed — the current `kern-` is provisional, the convention is not.
 
 ## Rules
 
-- Pattern: `kern-<domain>` — lowercase, hyphen after the prefix, one word for the domain wherever possible.
-- The `<domain>` names the single domain the package owns (see the [brick test](brick-test.md)): `kern-guard`, `kern-vault`, `kern-steering`.
-- One repo = one package = one Go module. Module path follows the repo:
-  `github.com/kern-ia/kern-<domain>`.
-  Prefer the lowercase org slug in module paths — GitHub resolves it case-insensitively, and lowercase avoids the Go module proxy's `!p`-style escaping of uppercase letters.
+- Pattern: `<prefix>-<domain>` — lowercase, one hyphen.
+- `<domain>` is one word or a clear abbreviation. **The test is legibility, not length**: someone who knows the project should know what the repo does from its name alone. `link`, `orch`, `vault` pass. `svc2`, `common`, `misc` do not.
+- **Package repos own exactly one domain.** That is the [brick test](brick-test.md), and the name states which domain it is.
+- **Non-package repos** — apps, utilities, the documentation site — take the prefix too, but the brick test does not apply to them. They are held to having one reason to exist, which is a weaker bar than owning one domain.
+- One package repo = one Go module. The module path follows the repo: `github.com/<org>/<prefix>-<domain>`.
 
-## Target repo list
+## Existing repos
 
-| Repo | Domain |
-|---|---|
-| `kern-link` | LLM provider gateway (single passage point to providers) |
-| `kern-orch` | Agentic loop (short tasks, context zones, freeze/respawn) |
-| `kern-anon` | PII detection and pseudonymization by ID |
-| `kern-ui` | Interface brick (run transitions streamed to a browser) |
-| `kern-steering` | Intervention channel (steer / queue / replan / nudge) |
-| `kern-policies` | Permissions, budgets, escalation |
-| `kern-skills` | Declarative capability registry |
-| `kern-tools` | MCP host |
-| `kern-execution` | Sandboxed subprocess runner |
-| `kern-guard` | Structural guardrail (inline, blocking) |
-| `kern-scorer` | Semantic guardrail (async) |
-| `kern-observation` | Watcher + declared-vs-observed analyzer |
-| `kern-vault` | Credentials |
+| Repo | Kind | Purpose |
+|---|---|---|
+| `kern-link` | package | LLM provider gateway — the single passage point to providers |
+| `kern-orch` | package | Agentic loop — graph-driven workflows, short tasks, freeze/respawn |
+| `kern-anon` | package | PII detection and pseudonymization by ID |
+| `kern-ui` | app | Run transitions streamed to a browser |
+| `kern-wiki` | docs | Documentation site |
+| `.github` | org | Exempt from the pattern — GitHub fixes this name |
 
-The first four exist; the rest are planned. `kern-orch` and `kern-anon` are the settled names — earlier drafts called them `kern-orchestration` and `kern-pii`. Short domain words win.
-
-`kern-link` now lives under the org at [kern-ia/kern-link](https://github.com/kern-ia/kern-link).
+Planned packages are listed in the [org profile](../profile/README.md), not here. The decomposition is still moving; a naming convention should not be the thing that freezes it.
 
 ## Open
 
-- The **core repo name** (`os` vs `kern-os`) is not settled — see the [decision log](decisions.md).
-
-Non-package repos took the prefix anyway: the UI shipped as `kern-ui` and the documentation site as `kern-wiki`. Only this `.github` repo is exempt, and only because GitHub forces the name.
+- **The product and org name.** The current one is taken elsewhere. Every `kern-*` repo, module path, and import gets renamed once a replacement is chosen — see the [decision log](decisions.md).
+- **The core repo name** (`os` vs `<prefix>-os`).

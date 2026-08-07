@@ -13,9 +13,13 @@ Lightweight record of org-level decisions: what is settled, what is open. Packag
 | 2026-07 | **Org renamed `Project-Kern` → `kern-ia`.** GitHub redirects the old URLs, but new links use `kern-ia`. |
 | 2026-07 | **`kern-link` moved under the org** from `julienlegoux/kern-proxy`. |
 | 2026-08 | **UI app: `kern-ui`, and it is Go, not TypeScript.** A single binary that receives run transitions and streams them to a browser — a `kern-*` brick like the others, so it takes the prefix. |
-| 2026-08 | **Short domain names settled:** `kern-orch` (not `kern-orchestration`) and `kern-anon` (not `kern-pii`). |
+| 2026-08 | **Domain names are judged on legibility, not length.** One word or a clear abbreviation, either is fine as long as the name says what the repo is: `kern-orch`, `kern-anon`. |
+| 2026-08 | **One package repo = one Go module, deliberately.** The cost of multi-repo is cross-cutting changes, and the bet is that there are almost none: bricks meet only at the norm, so a change lands in one repo. Anything that does ripple is structural (a Go version, a norm revision) and would be a coordinated event under any layout. |
 
 ## Open
+
+### Product and org name
+The current name is taken elsewhere, so the product, the org, and every `kern-*` repo get renamed. The `<prefix>-<domain>` convention survives the rename — only the prefix changes. Blocks nothing today, but everything written with the name hardcoded pays for it later, so docs keep org references relative where GitHub allows it.
 
 ### Core repo name — `os` vs `kern-os`
 `os` is short but generic (collides mentally with the stdlib package and the concept); `kern-os` is uniform with the family. Decide before the core repo is created.
