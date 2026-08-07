@@ -1,0 +1,48 @@
+name: RFC / design proposal
+description: Propose a new package, a new interface, or any cross-package change.
+title: "[rfc] "
+labels: ["rfc"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: The problem this solves and why now.
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed design
+      description: >-
+        Interfaces, manifests, data flow. State where it sits relative to the
+        hot path (policies-gate → orchestration → guard → pii → kern-link →
+        provider) and whether it blocks inline or scores async.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New package (brick)
+        - Change to an existing package's interface
+        - Change to the norm (manifest schemas)
+        - Cross-package / architectural
+        - Org convention or process
+    validations:
+      required: true
+  - type: textarea
+    id: domain
+    attributes:
+      label: Domain (new packages only)
+      description: >-
+        Name the one domain this package owns, in a sentence. Several operations
+        on one subject are fine — the question is whether removing one would
+        leave the rest with a reason to exist somewhere else. If it would, this
+        is two packages. Skip if this is not a new package.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Breaking changes, migration, privacy (GDPR) implications, security surface.

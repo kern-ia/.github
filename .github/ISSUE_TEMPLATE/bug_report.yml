@@ -1,0 +1,50 @@
+name: Bug report
+description: Something is broken or behaves differently than documented.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Tag (e.g. v0.3.1) or commit SHA of the affected package.
+      placeholder: v0.3.1
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps or code. If it involves an LLM call, reproduce against the `faux` provider if at all possible.
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      description: >-
+        Paste relevant logs. IMPORTANT — redact before pasting: no personal
+        data (PII), no verbatim provider requests/responses, no credentials.
+      render: text
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This report contains no personal data, verbatim provider payloads, or credentials.
+          required: true
