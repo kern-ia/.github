@@ -1,6 +1,6 @@
 # `.github` — Kern org defaults
 
-This repository is the organisation hub for **Kern**. It holds the org profile, the default community health files inherited by every `kern-*` repository, and the org-wide conventions.
+This repository is the organisation hub for **Kern**. It holds the org profile and the default community health files inherited by every repository in the org.
 
 ## How inheritance works
 
@@ -15,7 +15,7 @@ GitHub treats files in this repo as **fallbacks**: any repository in the org tha
 | `.github/ISSUE_TEMPLATE/` | Default issue forms (bug, feature, RFC) |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Default PR template |
 
-Not inherited — each repo must carry its own: `LICENSE`, `README.md`, `CODEOWNERS`.
+Not inherited — a repo that wants these carries its own: `LICENSE`, `README.md`, `CODEOWNERS`. No license has been chosen yet, and no repo defines code owners.
 
 > **Note:** GitHub only activates the profile README, health files, and templates from this repo's **default branch**.
 

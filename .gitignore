@@ -1,1 +1,4 @@
 .claude/settings.local.json
+
+# Local scratch — open decisions, not part of the org defaults
+*.local.md
