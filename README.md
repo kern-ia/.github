@@ -12,7 +12,6 @@ GitHub treats files in this repo as **fallbacks**: any repository in the org tha
 | `CONTRIBUTING.md` | Default contribution guide for every repo |
 | `CODE_OF_CONDUCT.md` | Default code of conduct |
 | `SECURITY.md` | Default security policy |
-| `SUPPORT.md` | Default support pointers |
 | `.github/ISSUE_TEMPLATE/` | Default issue forms (bug, feature, RFC) |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Default PR template |
 
