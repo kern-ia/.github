@@ -10,9 +10,17 @@ Every package repo is independently versioned with [semver](https://semver.org).
 - Go modules at major version ≥ 2 carry the `/vN` path suffix (`github.com/kern-ia/kern-link/v2`) per the Go modules convention.
 - Every PR declares its semver impact (patch / minor / major / none) in the PR template; the next tag is the max of the impacts merged since the last one.
 
-## Changelog
+## Release notes
 
-Each release documents what changed: either a `CHANGELOG.md` (Keep a Changelog style) or a substantive annotated-tag / GitHub-release message. "Misc fixes" is not a changelog.
+**No `CHANGELOG.md`.** Every repo documents itself as an OKF bundle, and the bundle's `log.md` already carries the history of what changed. A second hand-maintained history file duplicates that work and drifts from it within a release or two.
+
+What `log.md` does not answer is *"what breaks if I move from `v0.4.0` to `v0.5.0`"* — its entries are grouped by date, not by tag. That is the **release note**: the annotated tag message, which GitHub surfaces as a Release. Every tag carries one, and it states:
+
+- the semver impact and what drove it — the PR template collects this per-PR, the tag aggregates it;
+- **what breaks, explicitly**, whenever a `0.x` minor bump breaks anything. Pre-1.0 this is the note's whole reason to exist;
+- what a consumer has to change to adopt the version.
+
+"Misc fixes" is not a release note.
 
 ## Compatibility surface
 
