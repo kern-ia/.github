@@ -7,4 +7,4 @@ Kern is in design phase; there is no general help channel yet.
 - **Design question, new package proposal, cross-package concern?** Open an RFC issue — see [contributing](CONTRIBUTING.md) for what a package proposal must answer.
 - **Security problem?** Never open a public issue — see [SECURITY.md](SECURITY.md).
 
-Start with the [org profile](https://github.com/kern-ia) and the [conventions docs](docs) — most "how is this meant to work" questions are answered there.
+Start with the [org profile](https://github.com/kern-ia) and the [wiki](https://github.com/kern-ia/kern-wiki) — most "how is this meant to work" questions are answered there.

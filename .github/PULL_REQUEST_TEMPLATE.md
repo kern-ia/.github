@@ -8,7 +8,7 @@
 
 ## Semver impact
 
-<!-- Pick one: patch / minor / major / none — see .github repo, docs/versioning.md -->
+<!-- Pick one: patch / minor / major / none. While a package is 0.x, a minor may break and a patch must not. -->
 
 ## Checklist
 

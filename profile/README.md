@@ -54,4 +54,4 @@ Go core (`CGO_ENABLED=0` static binary) · Go UI binary (`kern-ui`, talks to the
 
 Design phase — ARCHITECTURE.md v0.3, July 2026. POC milestones: **M0** walking skeleton → **M1** harness → **M2** agents → **M3** supervision.
 
-Org-wide conventions live in [`.github/docs`](https://github.com/kern-ia/.github/tree/main/docs): [naming](https://github.com/kern-ia/.github/blob/main/docs/naming.md) · [versioning](https://github.com/kern-ia/.github/blob/main/docs/versioning.md) · [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md) · [decision log](https://github.com/kern-ia/.github/blob/main/docs/decisions.md).
+Conventions, design notes and package documentation live in the [wiki](https://github.com/kern-ia/kern-wiki). How to contribute: [CONTRIBUTING.md](https://github.com/kern-ia/.github/blob/main/CONTRIBUTING.md).

@@ -22,14 +22,11 @@ Not inherited — each repo must carry its own: `LICENSE`, `README.md`, `CODEOWN
 
 ## Contents
 
-- [`profile/README.md`](profile/README.md) — org landing page: what OS is, package inventory, principles, status.
-- [`docs/`](docs/) — org-wide conventions:
-  - [naming.md](docs/naming.md) — the `kern-*` repository naming convention
-  - [versioning.md](docs/versioning.md) — semver and release policy for package repos
-  - [privacy-engineering.md](docs/privacy-engineering.md) — GDPR (RGPD) rules as engineering constraints
-  - [decisions.md](docs/decisions.md) — decision log: what is settled, what is open
-- Health files and templates listed above.
+- [`profile/README.md`](profile/README.md) — org landing page: what Kern is, package inventory, principles, status.
+- Health files and templates, listed above.
+
+Nothing else. This repo holds only what GitHub itself reads and applies across the org. Conventions, design notes and package documentation live in the [wiki](https://github.com/kern-ia/kern-wiki) — GitHub does not read them, so they gain nothing from sitting here and would only fork from the wiki's copy.
 
 ## Changing these defaults
 
-Changes here affect every repository in the org that relies on the fallbacks. Open an issue (or an RFC for anything structural) before changing conventions; typo-level fixes can go straight to a PR.
+Changes here affect every repository in the org that relies on the fallbacks. Open an issue (or an RFC for anything structural) before changing them; typo-level fixes can go straight to a PR.
