@@ -32,18 +32,15 @@ body:
         - Org convention or process
     validations:
       required: true
-  - type: checkboxes
-    id: brick-test
+  - type: textarea
+    id: domain
     attributes:
-      label: Brick test (required for new packages)
-      description: See docs/brick-test.md in the .github repo. Skip if this is not a new package.
-      options:
-        - label: The core runs without it.
-        - label: It owns exactly one domain.
-        - label: Plugging it in upgrades the core without modifying any other package.
-        - label: Untrusted execution (if any) stays out-of-process and capability-sandboxed.
-        - label: It can live in its own repo with its own semver.
-        - label: It is consumed only via the norm (manifests) — no reaching into core internals.
+      label: Domain (new packages only)
+      description: >-
+        Name the one domain this package owns, in a sentence. Several operations
+        on one subject are fine — the question is whether removing one would
+        leave the rest with a reason to exist somewhere else. If it would, this
+        is two packages. Skip if this is not a new package.
   - type: textarea
     id: impact
     attributes:

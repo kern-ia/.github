@@ -25,7 +25,6 @@ Not inherited — each repo must carry its own: `LICENSE`, `README.md`, `CODEOWN
 - [`profile/README.md`](profile/README.md) — org landing page: what OS is, package inventory, principles, status.
 - [`docs/`](docs/) — org-wide conventions:
   - [naming.md](docs/naming.md) — the `kern-*` repository naming convention
-  - [brick-test.md](docs/brick-test.md) — the gate a new package must pass, and the process to propose one
   - [versioning.md](docs/versioning.md) — semver and release policy for package repos
   - [privacy-engineering.md](docs/privacy-engineering.md) — GDPR (RGPD) rules as engineering constraints
   - [decisions.md](docs/decisions.md) — decision log: what is settled, what is open

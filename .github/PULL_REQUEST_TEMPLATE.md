@@ -15,5 +15,5 @@
 - [ ] `gofmt` and `go vet` clean; build passes with `CGO_ENABLED=0`
 - [ ] Tests pass **offline** (no live provider calls; `faux` provider for the LLM boundary)
 - [ ] No personal data, verbatim provider payloads, or credentials in code, fixtures, or logs
-- [ ] Stays inside this package's domain (brick test holds)
+- [ ] Stays inside this package's domain; other packages consumed only through the norm
 - [ ] Docs updated where behavior changed

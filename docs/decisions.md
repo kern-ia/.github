@@ -31,7 +31,7 @@ Posture is *source-available later*: private during design/POC, opened afterward
 The canonical Go CI (vet, lint, test, `CGO_ENABLED=0` build, offline against kern-link's `faux` provider) will be shared across all package repos. Two options, both fine:
 
 - **Reusable workflows in this `.github` repo** — conventional home, no extra repo; tags version CI together with unrelated content.
-- **A dedicated `kern-ci` repo** — passes the brick test (own domain, own semver); `.github` keeps only `workflow-templates/` starter stubs (GitHub only supports those here) that call it.
+- **A dedicated `kern-ci` repo** — one domain, its own semver; `.github` keeps only `workflow-templates/` starter stubs (GitHub only supports those here) that call it.
 
 Migration between the two costs one `uses:` line per consuming repo, so starting simple is low-risk.
 

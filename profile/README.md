@@ -36,7 +36,7 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 
 Non-package repos: [kern-wiki](https://github.com/kern-ia/kern-wiki) (documentation site) and this [`.github`](https://github.com/kern-ia/.github) repo (org profile, shared health files, conventions).
 
-A new package must pass the [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md): the core runs without it, it owns exactly one domain, and plugging it in upgrades the core without modifying any other package.
+A new package owns exactly one domain, plugs in through the norm without any other package being modified, and is proposed as an RFC before its repo exists — see [contributing](https://github.com/kern-ia/.github/blob/main/CONTRIBUTING.md).
 
 ## Principles
 
@@ -54,4 +54,4 @@ Go core (`CGO_ENABLED=0` static binary) · Go UI binary (`kern-ui`, talks to the
 
 Design phase — ARCHITECTURE.md v0.3, July 2026. POC milestones: **M0** walking skeleton → **M1** harness → **M2** agents → **M3** supervision.
 
-Org-wide conventions live in [`.github/docs`](https://github.com/kern-ia/.github/tree/main/docs): [naming](https://github.com/kern-ia/.github/blob/main/docs/naming.md) · [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md) · [versioning](https://github.com/kern-ia/.github/blob/main/docs/versioning.md) · [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md) · [decision log](https://github.com/kern-ia/.github/blob/main/docs/decisions.md).
+Org-wide conventions live in [`.github/docs`](https://github.com/kern-ia/.github/tree/main/docs): [naming](https://github.com/kern-ia/.github/blob/main/docs/naming.md) · [versioning](https://github.com/kern-ia/.github/blob/main/docs/versioning.md) · [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md) · [decision log](https://github.com/kern-ia/.github/blob/main/docs/decisions.md).

@@ -8,8 +8,8 @@ The prefix is the product name. The product and the org are being renamed — th
 
 - Pattern: `<prefix>-<domain>` — lowercase, one hyphen.
 - `<domain>` is one word or a clear abbreviation. **The test is legibility, not length**: someone who knows the project should know what the repo does from its name alone. `link`, `orch`, `vault` pass. `svc2`, `common`, `misc` do not.
-- **Package repos own exactly one domain.** That is the [brick test](brick-test.md), and the name states which domain it is.
-- **Non-package repos** — apps, utilities, the documentation site — take the prefix too, but the brick test does not apply to them. They are held to having one reason to exist, which is a weaker bar than owning one domain.
+- **Package repos own exactly one domain**, and the name states which one. Several operations on one subject are still one domain — `kern-anon` detects and pseudonymizes, both acting on PII in text. The question is whether removing an operation would leave the rest with a reason to exist somewhere else.
+- **Non-package repos** — apps, utilities, the documentation site — take the prefix too, but not that rule. They only have to have one reason to exist.
 - One package repo = one Go module. The module path follows the repo: `github.com/<org>/<prefix>-<domain>`.
 
 ## Existing repos
