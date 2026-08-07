@@ -19,4 +19,4 @@ The core is a composition root over independent packages ("bricks"). Before a ne
 
 ## Reference brick
 
-[kern-link](https://github.com/julienlegoux/kern-proxy) is the template: it predates the core, owns one domain (the provider boundary), is consumed as a versioned dependency, and the core composes it without kern-link knowing anything about the core.
+[kern-link](https://github.com/kern-ia/kern-link) is the template: it predates the core, owns one domain (the provider boundary), is consumed as a versioned dependency, and the core composes it without kern-link knowing anything about the core.

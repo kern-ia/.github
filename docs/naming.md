@@ -7,7 +7,7 @@
 - Pattern: `kern-<domain>` — lowercase, hyphen after the prefix, one word for the domain wherever possible.
 - The `<domain>` names the single domain the package owns (see the [brick test](brick-test.md)): `kern-guard`, `kern-vault`, `kern-steering`.
 - One repo = one package = one Go module. Module path follows the repo:
-  `github.com/project-kern/kern-<domain>`.
+  `github.com/kern-ia/kern-<domain>`.
   Prefer the lowercase org slug in module paths — GitHub resolves it case-insensitively, and lowercase avoids the Go module proxy's `!p`-style escaping of uppercase letters.
 
 ## Target repo list
@@ -27,7 +27,7 @@
 | `kern-observation` | Watcher + declared-vs-observed analyzer |
 | `kern-vault` | Credentials |
 
-`kern-link` currently lives at [julienlegoux/kern-proxy](https://github.com/julienlegoux/kern-proxy) and is expected to move under the org.
+`kern-link` now lives under the org at [kern-ia/kern-link](https://github.com/kern-ia/kern-link).
 
 ## Open
 

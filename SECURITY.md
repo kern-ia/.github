@@ -17,7 +17,7 @@ All repositories in the Kern org. Reports of particular interest:
 
 - Anything that lets untrusted code (skills, tools, external agents) escape its sandbox or run in-process.
 - Credential exposure — credentials must live outside the core; kern-link receives ephemeral credentials per call.
-- **Privacy-boundary defects are security issues here.** PII reaching a provider or persistence un-pseudonymized, or verbatim content being logged, is treated with the same severity as a code-execution bug. See [privacy engineering](https://github.com/Project-Kern/.github/blob/main/docs/privacy-engineering.md).
+- **Privacy-boundary defects are security issues here.** PII reaching a provider or persistence un-pseudonymized, or verbatim content being logged, is treated with the same severity as a code-execution bug. See [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md).
 
 ## Supported versions
 

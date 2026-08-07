@@ -20,7 +20,7 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 
 | Package | Domain | Status |
 |---|---|---|
-| [kern-link](https://github.com/julienlegoux/kern-proxy) | LLM provider gateway — 35 providers, unified typed event stream, priced model catalog | ✅ exists |
+| [kern-link](https://github.com/kern-ia/kern-link) | LLM provider gateway — 35 providers, unified typed event stream, priced model catalog | ✅ exists |
 | kern-steering | Intervention channel — steer, queue, replan, nudge | 🔬 planned |
 | kern-orchestration | Agentic loop — short tasks, context zones, freeze = fresh-context respawn | 🔬 planned |
 | kern-policies | Permissions, budgets, escalation | 🔬 planned |
@@ -33,7 +33,7 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 | kern-observation | Watcher + declared-vs-observed process analyzer | 🔬 planned |
 | kern-vault | Credentials, externalized outside the core | 🔬 planned |
 
-A new package must pass the [brick test](../docs/brick-test.md): the core runs without it, it owns exactly one domain, and plugging it in upgrades the core without modifying any other package.
+A new package must pass the [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md): the core runs without it, it owns exactly one domain, and plugging it in upgrades the core without modifying any other package.
 
 ## Principles
 
@@ -51,4 +51,4 @@ Go core (`CGO_ENABLED=0` static binary) · TypeScript UI (separate app, talks to
 
 Design phase — ARCHITECTURE.md v0.3, July 2026. POC milestones: **M0** walking skeleton → **M1** harness → **M2** agents → **M3** supervision.
 
-Org-wide conventions live in [`.github/docs`](../docs): [naming](../docs/naming.md) · [brick test](../docs/brick-test.md) · [versioning](../docs/versioning.md) · [privacy engineering](../docs/privacy-engineering.md) · [decision log](../docs/decisions.md).
+Org-wide conventions live in [`.github/docs`](https://github.com/kern-ia/.github/tree/main/docs): [naming](https://github.com/kern-ia/.github/blob/main/docs/naming.md) · [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md) · [versioning](https://github.com/kern-ia/.github/blob/main/docs/versioning.md) · [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md) · [decision log](https://github.com/kern-ia/.github/blob/main/docs/decisions.md).

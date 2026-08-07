@@ -6,9 +6,9 @@ Thanks for your interest in Kern. This guide is the default for every repository
 
 ## Discussion first
 
-- **Bug?** Open a [bug report](../../issues/new/choose). Small, obvious fixes can go straight to a PR.
+- **Bug?** Open a bug report in the affected repository (Issues → New issue → Bug report). Small, obvious fixes can go straight to a PR.
 - **Feature or behavior change?** Open a feature request first so the owning package and approach are agreed before code exists.
-- **New package, new interface, anything cross-package?** Open an **RFC** issue. New packages must pass the [brick test](https://github.com/Project-Kern/.github/blob/main/docs/brick-test.md).
+- **New package, new interface, anything cross-package?** Open an **RFC** issue. New packages must pass the [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md).
 
 ## Code standards (Go)
 
@@ -16,13 +16,13 @@ Thanks for your interest in Kern. This guide is the default for every repository
 - The build must pass with `CGO_ENABLED=0`. The core ships as a static binary; packages must not break that.
 - Prefer table-driven tests; keep packages small and focused on their one domain.
 - **Tests must run offline.** No live provider calls in tests or CI — kern-link's `faux` provider is the target for anything touching the LLM boundary.
-- **No real personal data** in code, fixtures, test names, or logs. See [privacy engineering](https://github.com/Project-Kern/.github/blob/main/docs/privacy-engineering.md).
+- **No real personal data** in code, fixtures, test names, or logs. See [privacy engineering](https://github.com/kern-ia/.github/blob/main/docs/privacy-engineering.md).
 
 ## Pull requests
 
 - One concern per PR. Small PRs get reviewed; large ones get postponed.
 - Link the issue or RFC the PR resolves.
-- Declare the semver impact (patch / minor / major / none) — the template asks for it. See [versioning](https://github.com/Project-Kern/.github/blob/main/docs/versioning.md).
+- Declare the semver impact (patch / minor / major / none) — the template asks for it. See [versioning](https://github.com/kern-ia/.github/blob/main/docs/versioning.md).
 - Write commit messages in the imperative, scoped to what changed ("add freeze respawn to orchestration loop"). [Conventional Commits](https://www.conventionalcommits.org) style is welcome but not required.
 
 ## What gets merged

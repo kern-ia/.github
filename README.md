@@ -8,7 +8,7 @@ GitHub treats files in this repo as **fallbacks**: any repository in the org tha
 
 | File | Effect across the org |
 |---|---|
-| `profile/README.md` | The org landing page at github.com/Project-Kern |
+| `profile/README.md` | The org landing page at github.com/kern-ia |
 | `CONTRIBUTING.md` | Default contribution guide for every repo |
 | `CODE_OF_CONDUCT.md` | Default code of conduct |
 | `SECURITY.md` | Default security policy |
