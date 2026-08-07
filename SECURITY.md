@@ -4,9 +4,7 @@
 
 **Do not open a public issue for security problems.**
 
-Report privately:
-
-Use **GitHub private vulnerability reporting**: "Report a vulnerability" under the Security tab of the affected repository. It is enabled on every repository in the org, and it gives us a private thread with you.
+Report privately using **GitHub private vulnerability reporting**: "Report a vulnerability" under the Security tab of the affected repository. It is enabled on every repository in the org, and it gives us a private thread with you.
 
 Include a description, the affected package and version or commit, and reproduction steps if you have them.
 
