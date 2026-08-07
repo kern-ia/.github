@@ -21,17 +21,20 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 | Package | Domain | Status |
 |---|---|---|
 | [kern-link](https://github.com/kern-ia/kern-link) | LLM provider gateway — 35 providers, unified typed event stream, priced model catalog | ✅ exists |
+| [kern-orch](https://github.com/kern-ia/kern-orch) | Agentic loop — graph-driven workflows, short tasks, context zones, freeze = fresh-context respawn | ✅ exists |
+| [kern-anon](https://github.com/kern-ia/kern-anon) | PII detection and pseudonymization by ID — Go rewrite of Presidio's core | ✅ exists |
+| [kern-ui](https://github.com/kern-ia/kern-ui) | Interface brick — streams run transitions to a browser | ✅ exists |
 | kern-steering | Intervention channel — steer, queue, replan, nudge | 🔬 planned |
-| kern-orchestration | Agentic loop — short tasks, context zones, freeze = fresh-context respawn | 🔬 planned |
 | kern-policies | Permissions, budgets, escalation | 🔬 planned |
 | kern-skills | Declarative capability registry | 🔬 planned |
 | kern-tools | MCP host | 🔬 planned |
 | kern-execution | Sandboxed subprocess runner | 🔬 planned |
 | kern-guard | Structural guardrail — inline, blocking | 🔬 planned |
-| kern-pii | PII pseudonymization by ID (Presidio-based) | 🔬 planned |
 | kern-scorer | Semantic guardrail — async, never blocks | 🔬 planned |
 | kern-observation | Watcher + declared-vs-observed process analyzer | 🔬 planned |
 | kern-vault | Credentials, externalized outside the core | 🔬 planned |
+
+Non-package repos: [kern-wiki](https://github.com/kern-ia/kern-wiki) (documentation site) and this [`.github`](https://github.com/kern-ia/.github) repo (org profile, shared health files, conventions).
 
 A new package must pass the [brick test](https://github.com/kern-ia/.github/blob/main/docs/brick-test.md): the core runs without it, it owns exactly one domain, and plugging it in upgrades the core without modifying any other package.
 
@@ -45,7 +48,7 @@ A new package must pass the [brick test](https://github.com/kern-ia/.github/blob
 
 ## Stack
 
-Go core (`CGO_ENABLED=0` static binary) · TypeScript UI (separate app, talks to the core only via steering/observation) · Postgres (journal, budgets; pgvector later) · CI runs offline against kern-link's `faux` provider.
+Go core (`CGO_ENABLED=0` static binary) · Go UI binary (`kern-ui`, talks to the core only via steering/observation) · Postgres (journal, budgets; pgvector later) · CI runs offline against kern-link's `faux` provider.
 
 ## Status
 
