@@ -6,10 +6,14 @@
 
 Report privately:
 
-- Preferred: GitHub **private vulnerability reporting** ("Report a vulnerability" under the Security tab of the affected repository), where enabled.
-- Otherwise: email **lgx.julien@gmail.com** with a description, affected package and version/commit, and reproduction steps if you have them.
+- **Preferred — GitHub private vulnerability reporting.** "Report a vulnerability" under the Security tab of the affected repository. It is enabled on every repository in the org.
+- **Otherwise — email lgx.julien@gmail.com.** Include a description, the affected package and version or commit, and reproduction steps if you have them.
 
 You should receive an acknowledgement within a few days. Please allow time for a fix before any public disclosure — we will coordinate timing with you.
+
+## What happens next
+
+The report is triaged, and a fix is prepared privately. When it ships we publish a **GitHub Security Advisory** on the affected repository, and you are **credited in it by name unless you ask us not to be**. Tell us how you want to be named, or that you would rather stay anonymous.
 
 ## Scope
 
