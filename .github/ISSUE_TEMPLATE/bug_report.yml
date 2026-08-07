@@ -3,28 +3,6 @@ description: Something is broken or behaves differently than documented.
 title: "[bug] "
 labels: ["bug"]
 body:
-  - type: dropdown
-    id: package
-    attributes:
-      label: Package
-      description: Which package (brick) is affected?
-      options:
-        - kern-link
-        - kern-steering
-        - kern-orchestration
-        - kern-policies
-        - kern-skills
-        - kern-tools
-        - kern-execution
-        - kern-guard
-        - kern-pii
-        - kern-scorer
-        - kern-observation
-        - kern-vault
-        - core (osd / composition root / norm)
-        - other / not sure
-    validations:
-      required: true
   - type: input
     id: version
     attributes:
