@@ -1,46 +1,53 @@
 # CONVENTIONS.md — .github (org meta-repo)
 
-Ce repo est la source des fichiers santé communautaire par défaut de l'organisation
-(`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, templates d'issues et de PR) : tout
-repo `kern-ia` qui ne fournit pas sa propre version hérite de celle-ci. Il porte donc une
-responsabilité particulière — une modification ici affecte silencieusement tous les autres
-repos qui n'ont pas de fichier local équivalent.
+This repo is the source of the organization's default community-health files
+(`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, issue and PR templates): any
+`kern-ia` repo that doesn't provide its own version inherits this one. It therefore carries a
+particular responsibility — a change here silently affects every other repo that doesn't have
+a matching local file.
+
+## Language
+
+Code and comments (any tooling or scripts added to this repo) are written in English — no
+exceptions. Internal documentation such as this file stays in whatever language the team
+works in day to day; the org-wide files this repo defines (`CONTRIBUTING.md`,
+`CODE_OF_CONDUCT.md`, `SECURITY.md`, templates) are already in English and should stay that
+way, since they're public-facing and inherited org-wide.
 
 ## Branches
 
-- `main` : branche stable. Protégée — aucun push direct.
-- Branches de travail : `docs/<slug>`, `chore/<slug>`.
-- Toute modification passe par une Pull Request, y compris pour ce repo — particulièrement
-  ici, puisqu'un changement mal relu se propage à toute l'organisation.
+- `main`: stable branch. Protected — no direct pushes.
+- Working branches: `docs/<slug>`, `chore/<slug>`.
+- Any change goes through a Pull Request, including on this repo — especially here, since a
+  poorly reviewed change propagates to the whole organization.
 
 ## Commits
 
-Conventional Commits : `docs:` pour le contenu, `chore:` pour la structure/templates.
+Conventional Commits: `docs:` for content, `chore:` for structure/templates.
 
 ## Pull Requests
 
-- Un seul sujet par PR.
-- Toute modification de `CONTRIBUTING.md`, `SECURITY.md` ou des templates doit lister
-  explicitement, dans la description de la PR, les repos qui héritent du défaut modifié (donc
-  qui n'ont pas de version locale) — pour rendre visible l'effet de bord organisationnel.
+- One subject per PR.
+- Any change to `CONTRIBUTING.md`, `SECURITY.md`, or the templates must explicitly list, in
+  the PR description, which repos inherit the modified default (i.e. which ones have no local
+  version) — to make the organizational side effect visible.
 
-## Contenu à maintenir en cohérence
+## Content to keep consistent
 
-- `CONTRIBUTING.md` affirme que « chaque repo porte son propre `CONVENTIONS.md` » — c'est
-  désormais vrai pour les 6 repos de l'org (voir le rapport d'audit livré avec cette PR). À
-  garder vrai pour tout nouveau repo créé (ajouter la case correspondante à la checklist de
-  création de repo si elle existe).
-- `CONTRIBUTING.md` affirme aussi qu'« il n'y a pas de `CHANGELOG.md` », notes de version dans
-  le tag annoté. `kern-link` déroge à cette règle avec un `CHANGELOG.md` réel et maintenu.
-  À trancher explicitement : soit documenter `kern-link` comme exception assumée dans ce
-  fichier, soit généraliser le `CHANGELOG.md` aux autres repos et retirer l'affirmation
-  actuelle qui est aujourd'hui fausse en pratique.
-- Le template PR (`.github/PULL_REQUEST_TEMPLATE.md`) renvoie vers le `CONVENTIONS.md` du
-  repo pour tout ce que la CI ne peut pas vérifier elle-même — cohérent avec l'existence de
-  ces fichiers, à ne pas casser en le modifiant.
+- `CONTRIBUTING.md` states that "each repo carries its own `CONVENTIONS.md`" — now true for
+  all 6 org repos (see the audit report shipped with this PR). Keep it true for any new repo
+  created (add the matching item to the repo-creation checklist if one exists).
+- `CONTRIBUTING.md` also states "there is no `CHANGELOG.md`," release notes living in the
+  annotated tag. `kern-link` deviates from this rule with a real, maintained `CHANGELOG.md`.
+  To decide explicitly: either document `kern-link` as an accepted exception in this file, or
+  generalize `CHANGELOG.md` to the other repos and remove the current statement, which is
+  false in practice today.
+- The PR template (`.github/PULL_REQUEST_TEMPLATE.md`) points to the repo's `CONVENTIONS.md`
+  for anything CI cannot verify on its own — consistent with these files existing now, do not
+  break that link when editing it.
 
-## Sécurité / confidentialité
+## Security / privacy
 
-Ce repo définit `SECURITY.md` pour toute l'organisation — toute modification de la procédure
-de signalement doit rester compatible avec le GitHub private vulnerability reporting déjà
-activé sur chaque repo.
+This repo defines `SECURITY.md` for the whole organization — any change to the reporting
+procedure must stay compatible with GitHub private vulnerability reporting, already enabled
+on every repo.
