@@ -24,6 +24,10 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 | [kern-orch](https://github.com/kern-ia/kern-orch) | Agentic loop — graph-driven workflows, short tasks, context zones, freeze = fresh-context respawn |
 | [kern-anon](https://github.com/kern-ia/kern-anon) | PII detection and pseudonymization by ID — a Go rewrite of Presidio's core |
 | [kern-ui](https://github.com/kern-ia/kern-ui) | Interface brick — streams run transitions to a browser |
+| [kern-exec](https://github.com/kern-ia/kern-exec) | Sandboxed process execution — filesystem allow-list, network denied unless granted, wall-clock timeout |
+| [kern-firewall](https://github.com/kern-ia/kern-firewall) | Agnostic AI firewall — a chokepoint in front of every request and action directed at an AI provider, agent or not |
+| [kern-memory](https://github.com/kern-ia/kern-memory) | Where other `kern-*` bricks put things they need to remember |
+| [kern-notify](https://github.com/kern-ia/kern-notify) | Relays run streams to Telegram, and lets that same chat steer a run back |
 
 Nine further bricks are planned: steering, policies, skills, tools, execution, guard, scorer, observation and vault. Their boundaries are still moving — the [wiki](https://github.com/kern-ia/kern-wiki) carries the current thinking.
 

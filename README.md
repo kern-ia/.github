@@ -15,7 +15,7 @@ GitHub treats files in this repo as **fallbacks**: any repository in the org tha
 | `.github/ISSUE_TEMPLATE/` | Default issue forms (bug, feature, RFC) |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Default PR template |
 
-Not inherited — a repo that wants these carries its own: `LICENSE`, `README.md`, `CODEOWNERS`. No license has been chosen yet, and no repo defines code owners.
+Not inherited — a repo that wants these carries its own: `LICENSE`, `README.md`, `CODEOWNERS`. MIT across the org (each repo carries its own `LICENSE` file); no repo defines code owners yet.
 
 > **Note:** GitHub only activates the profile README, health files, and templates from this repo's **default branch**.
 
