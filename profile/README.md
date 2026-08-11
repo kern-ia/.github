@@ -28,6 +28,7 @@ Structural checks (**guard**) block inline. Semantic checks (**scorer**) score a
 | [kern-firewall](https://github.com/kern-ia/kern-firewall) | Agnostic AI firewall — a chokepoint in front of every request and action directed at an AI provider, agent or not |
 | [kern-memory](https://github.com/kern-ia/kern-memory) | Where other `kern-*` bricks put things they need to remember |
 | [kern-notify](https://github.com/kern-ia/kern-notify) | Relays run streams to Telegram, and lets that same chat steer a run back |
+| [kern-billing](https://github.com/kern-ia/kern-billing) | Real AI cost to end-user token wallet — Stripe subscriptions, monthly-reset credits, non-expiring top-ups |
 
 Nine further bricks are planned: steering, policies, skills, tools, execution, guard, scorer, observation and vault. Their boundaries are still moving — the [wiki](https://github.com/kern-ia/kern-wiki) carries the current thinking.
 
